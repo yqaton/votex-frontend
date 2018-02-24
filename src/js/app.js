@@ -1,11 +1,15 @@
-import { h, render } from 'preact'
+import { h, render, Component } from 'preact'
+import Button from './Components/button'
 
 const Hello = () => (
   <div>
-    Hello from react
+    <p>Это голосование за самых веселых импровизаторов!!!</p>
+    <p>Какая команда смешнее?</p>
+    <div>
+      <Button name='Команда 1' action={ e => alert("Вы проголосовали за команду 1!") }/>
+      <Button name='Команда 2' action={ e => alert("Вы проголосовали за команду 2!") }/>
+    </div>
   </div>
 )
 
-export default Hello
-
-render(<Hello />, document.getElementById('app'));
+render(<Hello />, document.getElementById('votexApp'));
